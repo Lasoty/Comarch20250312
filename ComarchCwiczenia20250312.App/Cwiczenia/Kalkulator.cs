@@ -27,4 +27,15 @@ public class Kalkulator
     {
         return x / y;
     }
+
+    internal int[] Reverse(int[] tab)
+    {
+        int[] result = new int[tab.Length];
+        for (int i = 0; i < tab.Length; i++)
+        {
+            result[tab.Length - (i + 1)] = tab[i];
+        }
+
+        return result;
+    }
 }

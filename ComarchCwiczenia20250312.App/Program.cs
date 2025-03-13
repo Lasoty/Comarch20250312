@@ -40,6 +40,14 @@ namespace ComarchCwiczenia20250312.App
                         GetXY(out x, out y);
                         Console.WriteLine($"Wynik dzielenie {x} oraz {y} to {kalkulator.Divide(x, y)}.");
                         break;
+                    case 5:
+                        int[] tab = GetIntArray();
+                        int[] reverseTab = kalkulator.Reverse(tab);
+                        //foreach (int item in reverseTab)
+                        //    Console.WriteLine(item);
+
+                        Console.WriteLine($"[{string.Join(", ", reverseTab)}]");
+                        break;
                     default:
                         ShowError("Podana wartość jest spoza zakresu menu");
                         break;
@@ -49,6 +57,29 @@ namespace ComarchCwiczenia20250312.App
             {
                 ShowError("Podana wartość jest nieprawidłowa");
             }
+        }
+
+        private static int[] GetIntArray()
+        {
+            string? sLiczby = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(sLiczby))
+            {
+                ShowError("Nie możesz podać pustej tablicy!");
+                return [];
+            }
+
+            string[] sWartosci = sLiczby.Split([' ', ',', ';'], StringSplitOptions.RemoveEmptyEntries);
+
+            int[] wynik = new int[sWartosci.Length];
+
+            for (int i = 0; i < wynik.Length; i++)
+            {
+                wynik[i] = int.Parse(sWartosci[i]);
+            }
+
+            var wynik2 = sWartosci.Select(x => int.Parse(x)).ToArray(); //LINQ
+
+            return wynik;
         }
 
         private static void GetXY(out int x, out int y)
@@ -66,6 +97,7 @@ namespace ComarchCwiczenia20250312.App
             Console.WriteLine(" 2. Odejmowanie");
             Console.WriteLine(" 3. Mnożenie");
             Console.WriteLine(" 4. Dzielenie");
+            Console.WriteLine(" 5. Odwróć tablicę");
         }
 
         private static void ShowError(string message)
