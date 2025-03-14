@@ -16,5 +16,5 @@ public class Book : EntityBase
 
     public bool IsBorrowed { get; set; }
 
-    public Customer Borrower { get; set; }
+    public Customer? Borrower { get; set; }
 }

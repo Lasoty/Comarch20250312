@@ -47,6 +47,8 @@ namespace Bibliotekarz.Data.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.Sql("SELECT 1");
+
             migrationBuilder.CreateIndex(
                 name: "IX_Books_BorrowerId",
                 table: "Books",
