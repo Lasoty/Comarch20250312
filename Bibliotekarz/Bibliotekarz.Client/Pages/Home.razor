@@ -1,0 +1,26 @@
+﻿@page "/"
+@page "/home"
+
+<PageTitle>Home</PageTitle>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Autor</th>
+            <th scope="col">Tytuł</th>
+            <th scope="col">Liczba stron</th>
+            <th scope="col">Czy wypożyczona</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in BookList)
+        {
+        <tr>
+            <td>@book.Author</td>
+            <td>@book.Title</td>
+            <td>@book.PageCount</td>
+            <td>@(book.IsBorrowed ? "Tak" : "Nie")</td>
+        </tr>
+        }
+    </tbody>
+</table>

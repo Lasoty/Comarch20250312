@@ -34,6 +34,7 @@ public class Program
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
         {
+            app.UseWebAssemblyDebugging();
             app.MapOpenApi();
             app.UseSwagger();
             app.UseSwaggerUI();
@@ -41,12 +42,16 @@ public class Program
 
         app.UseHttpsRedirection();
 
+        app.UseBlazorFrameworkFiles();
+        app.UseStaticFiles();
+
         app.UseAuthorization();
 
         // Use CORS policy
         app.UseCors("AllowAll");
 
         app.MapControllers();
+        app.MapFallbackToFile("index.html");
 
         app.Run();
     }

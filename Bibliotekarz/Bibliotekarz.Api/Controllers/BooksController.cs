@@ -1,7 +1,9 @@
-﻿using Bibliotekarz.Data.Context;
+﻿using Bibliotekarz.Client.Model;
+using Bibliotekarz.Data.Context;
 using Bibliotekarz.Data.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Book = Bibliotekarz.Data.Model.Book;
 
 namespace Bibliotekarz.Api.Controllers;
 
