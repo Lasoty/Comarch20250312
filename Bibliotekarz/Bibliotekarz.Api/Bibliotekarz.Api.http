@@ -1,6 +1,6 @@
 @Bibliotekarz.Api_HostAddress = http://localhost:5204
 
-GET {{Bibliotekarz.Api_HostAddress}}/weatherforecast/
+GET {{Bibliotekarz.Api_HostAddress}}/weatherforecast/get-weather
 Accept: application/json
 
 ###
