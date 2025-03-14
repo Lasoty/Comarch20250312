@@ -43,7 +43,18 @@ internal class Program
                         break;
                     case 4:
                         GetXY(out x, out y);
-                        Console.WriteLine($"Wynik dzielenie {x} oraz {y} to {kalkulator.Divide(x, y)}.");
+                        try
+                        {
+                            Console.WriteLine($"Wynik dzielenie {x} oraz {y} to {kalkulator.Divide(x, y)}.");
+                        }
+                        catch (DivideByZeroException)
+                        {
+                            ShowError("Pamiętaj cholero, nie dziel przez 0!");
+                        }
+                        catch (Exception ex)
+                        {
+                            ShowError(ex.Message);
+                        }
                         break;
                     case 5:
                         int[] tab = GetIntArray();

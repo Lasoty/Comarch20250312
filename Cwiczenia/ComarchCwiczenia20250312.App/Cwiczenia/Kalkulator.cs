@@ -23,9 +23,11 @@ public class Kalkulator
         return x * y; 
     }
 
-    public int Divide(int x, int y) 
+    public float Divide(int a, int b) 
     {
-        return x / y;
+        if (b == 0)
+            throw new ArgumentException("Wartość parametru nie może być równa 0.", nameof(b));
+        return a / (float)b;
     }
 
     internal int[] Reverse(int[] tab)
