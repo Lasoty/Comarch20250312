@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35828.75 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bibliotekarz.Api", "Bibliotekarz.Api\Bibliotekarz.Api.csproj", "{248D6F21-976B-4BF2-85A5-A1354D37602B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bibliotekarz.Data", "Bibliotekarz.Data\Bibliotekarz.Data.csproj", "{8E0B048E-E072-4D8A-89CE-79DEC387AEEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{248D6F21-976B-4BF2-85A5-A1354D37602B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{248D6F21-976B-4BF2-85A5-A1354D37602B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{248D6F21-976B-4BF2-85A5-A1354D37602B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E0B048E-E072-4D8A-89CE-79DEC387AEEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E0B048E-E072-4D8A-89CE-79DEC387AEEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E0B048E-E072-4D8A-89CE-79DEC387AEEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E0B048E-E072-4D8A-89CE-79DEC387AEEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

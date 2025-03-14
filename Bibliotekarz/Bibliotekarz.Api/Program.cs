@@ -1,3 +1,6 @@
+using Bibliotekarz.Data.Context;
+using Microsoft.EntityFrameworkCore;
+
 namespace Bibliotekarz.Api;
 
 public class Program
@@ -7,6 +10,14 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
+
+
+        //Configuracja bazy danych (DbContextu)
+        builder.Services.AddDbContext<AppDbContext>(options =>
+            options.UseSqlServer(
+                builder.Configuration.GetConnectionString("DefaultConnection"))
+            .EnableSensitiveDataLogging().EnableDetailedErrors()
+        );
 
         builder.Services.AddControllers();
         // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
